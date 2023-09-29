@@ -1,4 +1,18 @@
-
+document.getElementById('busquedaId').addEventListener('keypress',(event)=>{
+    if(!(/[0-9]/.test(event.key))){
+        event.preventDefault()
+    }
+})
+document.getElementById('apellidos').addEventListener('keypress',(event)=>{
+    if(!(/[a-zA-Z\s ]/.test(event.key))){
+        event.preventDefault()
+    }
+}) 
+document.getElementById('nombres').addEventListener('keypress',(event)=>{
+    if(!(/[a-zA-Z\s ]/.test(event.key))){
+        event.preventDefault()
+    }
+}) 
 const xhr = new XMLHttpRequest();
 xhr.open("GET","./Resources/towns.json",true);
 
