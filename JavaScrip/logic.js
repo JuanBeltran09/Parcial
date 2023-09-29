@@ -60,7 +60,7 @@ function selectTowns(data) {
         if (!municipio.includes(town.code)) {
           municipio.push(town.code);
           var option = document.createElement('option');
-          option.value = town.code;
+          option.value = town.name;
           option.textContent = town.name;
           municipioSelect.appendChild(option);
         }
@@ -124,12 +124,12 @@ function calcularEdad(fechaNacimiento) {
 }
 
 function filtrarPorId() {
-    const idBuscado = parseInt(document.getElementById('buscarPorId').value);
+    const idBuscado = parseInt(document.getElementById('busquedaId').value);
 
     const empleadoEncontrado = empleados.find(empleado => empleado.id === idBuscado);
 
     if (empleadoEncontrado) {
-        alert(`Empleado encontrado: ${empleadoEncontrado.nombres} ${empleadoEncontrado.apellidos}`);
+        alert(`Empleado encontrado: ${empleadoEncontrado.nombres} ${empleadoEncontrado.apellidos} ${empleadoEncontrado.ciudad} ${empleadoEncontrado.edad}`);
     } else {
         alert('Empleado no encontrado');
     }
