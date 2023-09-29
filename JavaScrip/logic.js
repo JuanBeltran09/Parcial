@@ -3,6 +3,11 @@ document.getElementById('busquedaId').addEventListener('keypress',(event)=>{
         event.preventDefault()
     }
 })
+document.getElementById('salario').addEventListener('keypress',(event)=>{
+    if(!(/[0-9]/.test(event.key))){
+        event.preventDefault()
+    }
+})
 document.getElementById('apellidos').addEventListener('keypress',(event)=>{
     if(!(/[a-zA-Z\s ]/.test(event.key))){
         event.preventDefault()
